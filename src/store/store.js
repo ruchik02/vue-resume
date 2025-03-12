@@ -7,8 +7,9 @@ export default createStore({
             name: 'Ruchika Sharma',
             title: 'Full Stack Developer',
             email: 'sruchika004@gmail.com',
-            location: 'Haryana, Yamunanagar',
-            bio: 'A passionate developer with expertise in modern web technologies'
+            location: 'Yamunanagar, Haryana',
+            bio: 'A passionate developer with expertise in modern web technologies',
+            desc: 'I am a skilled software developer with over 3+ year of valuable experience, currently employed at GeekyAnts. My expertise primarily lies in React, Next.js, Vue.js and React-Native. I possess in-depth knowledge of various technologies and tools including git, state management, routing, and lifecycle methods within React applications. My passion for coding drives me to continually expand my skill set and stay up-to-date with industry trends. I am committed to delivering high-quality software solutions and thrive in collaborative, innovative environments.'
         },
         skills: {
             frontend: ['HTML5', 'CSS3', 'JavaScript', 'Vue.js', 'React', 'Next.js'],

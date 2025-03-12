@@ -1,9 +1,13 @@
 <script>
 import { ref } from 'vue'
 import { useStore } from 'vuex'
+import TheFooter from './components/TheFooter.vue'
 
 export default {
   name: 'App',
+  components: {
+    TheFooter
+  },
   setup() {
     const drawer = ref(false)
     const store = useStore()
@@ -80,7 +84,7 @@ export default {
     </v-app-bar>
 
     <v-main>
-      <v-container fluid>
+      <v-container fluid class="fill-height">
         <router-view v-slot="{ Component }">
           <v-fade-transition mode="out-in">
             <component :is="Component" />
@@ -89,23 +93,7 @@ export default {
       </v-container>
     </v-main>
 
-    <v-footer app class="d-flex flex-column">
-      <div class="d-flex justify-space-between align-center w-100 px-4">
-        <span>&copy; {{ new Date().getFullYear() }}</span>
-        <div>
-          <v-btn
-            v-for="(link, platform) in $store.getters.getSocialLinks"
-            :key="platform"
-            :href="link"
-            target="_blank"
-            icon
-            variant="text"
-          >
-            <v-icon>mdi-{{ platform }}</v-icon>
-          </v-btn>
-        </div>
-      </div>
-    </v-footer>
+    <TheFooter />
   </v-app>
 </template>
 
@@ -116,5 +104,16 @@ export default {
 
 .v-main {
   transition: background-color 0.2s ease-in-out;
+  min-height: 100vh;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>
