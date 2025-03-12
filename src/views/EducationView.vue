@@ -72,9 +72,9 @@ export default {
           institution: 'Chitkara University',
           location: 'Baddi, Himachal Pradesh',
           achievements: [
-            'Graduated with First Class Honours',
-            'President of Computer Science Society',
-            'Published research paper on AI applications'
+            'Hostel Committee Member and active participant in NSS (National Service Scheme)',
+            'Excelled in HTML, CSS, Data Structures & Algorithms (DSA), JavaScript, and React',
+            'Consistently ranked among top-performing students in academics'
           ],
           subjects: [
             'Data Structures',
@@ -90,15 +90,13 @@ export default {
           institution: 'SD Public School',
           location: 'Yamunanagar, Haryana',
           achievements: [
-            'Dean\'s List for academic excellence',
-            'Led team project for local business',
-            'Won coding competition'
+            'Achieved 90% in Class 12th',
+            'Served as Head Girl, demonstrating leadership and organizational skills',
+            'Won a coding competition'
           ],
           subjects: [
-            'Programming Fundamentals',
-            'Web Design',
-            'Software Engineering',
-            'Mobile Development'
+            'Physics',
+            'Mathematics',
           ]
         }
       ]

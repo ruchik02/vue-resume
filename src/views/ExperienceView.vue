@@ -122,56 +122,55 @@ export default {
           location: 'Bengaluru, Karnataka',
           color: 'primary',
           responsibilities: [
-            'Lead development of enterprise-level web applications',
-            'Architect and implement scalable backend solutions',
-            'Mentor junior developers and conduct code reviews',
-            'Collaborate with cross-functional teams to define project requirements'
+            'Led the development of SwiftUI and Vue.js projects, ensuring high-quality and maintainable code.',
+            'Built and optimized cross-platform mobile applications using React Native and SwiftUI.',
+            'Developed client-focused web applications with Vue.js and Vuetify, ensuring responsive and intuitive UI.',
+            'Mentored junior developers, providing guidance on best practices and performance optimization.',
+            'Collaborated with designers and product teams to translate requirements into functional applications.'
           ],
           achievements: [
-            'Reduced application load time by 40% through optimization',
+            'Successfully delivered a booking app and a recruiter app (Kingsley Gate) within a 4-5 month timeline.',
             'Successfully led team of 5 developers in major platform upgrade',
-            'Implemented CI/CD pipeline reducing deployment time by 60%'
+            'Reduced frontend load times by 40% through performance optimizations in Vue and SwiftUI applications.',
+            'Spearheaded the implementation of Tailwind CSS and Vue.js in modernizing frontend design systems.'
           ],
-          technologies: ['Vue.js', 'Node.js', 'AWS', 'Docker', 'MongoDB'],
+          technologies: ['Vue.js', 'Node.js', 'SwiftUI', 'React Native', 'Vuetify'],
           projects: [
             {
-              name: 'Enterprise Dashboard',
-              description: 'Led development of company\'s flagship analytics dashboard used by 500+ clients'
+              name: 'Booking App',
+              description: 'Designed and built a SwiftUI-based booking application, optimizing user experience and navigation.s'
             },
             {
-              name: 'API Gateway',
-              description: 'Designed and implemented microservices architecture serving 1M+ requests daily'
+              name: 'Recruiter App & Website (Kingsley Gate)',
+              description: 'Developed a recruiter platform and website as a client project, ensuring seamless integration and UI/UX consistency.'
             }
           ]
         },
         {
           period: '2023 - 2024',
-          role: 'Software Engineer',
+          role: 'Software Engineer 1',
           company: 'GeekyAnts',
           companyLogo: 'https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_2/v1455093153/ft8vyhw8hulcadw8akdy.png',
           location: 'Bengaluru, Karnataka',
           color: 'secondary',
           responsibilities: [
-            'Developed and maintained multiple client web applications',
-            'Implemented responsive designs and user interfaces',
-            'Integrated third-party APIs and services',
-            'Participated in agile development processes'
+            'Developed and maintained multiple client applications using React Native and SwiftUI.',
+            'Designed and implemented responsive UI/UX for cross-platform mobile and web applications.',
+            'Integrated third-party APIs and services, ensuring seamless backend communication.',
+            'Followed agile development methodologies, collaborating with teams to meet project goals.'
           ],
           achievements: [
-            'Received "Developer of the Year" award in 2020',
-            'Reduced bug reports by 45% through improved testing practices',
-            'Successfully delivered 12 major projects ahead of schedule'
+            'Successfully completed React Native training and applied learnings to real-world projects.',
+            'Led the development of the PayPenny project, ensuring a smooth and intuitive user experience.',
+            'Delivered client projects on time, maintaining high-quality standards and performance.',
+            'Improved application efficiency and reduced bug reports by 40% through rigorous testing.'
           ],
-          technologies: ['React', 'Python', 'PostgreSQL', 'Redis', 'GCP'],
+          technologies: ['React', 'React Native,', 'Tailwind CSS', 'Supabase', 'Hasura'],
           projects: [
             {
-              name: 'E-commerce Platform',
-              description: 'Built scalable e-commerce solution handling $2M+ in annual transactions'
+              name: 'PayPenny Project',
+              description: 'Developed a React Native-based financial application, ensuring seamless transactions and user experience.'
             },
-            {
-              name: 'CRM System',
-              description: 'Developed custom CRM system improving customer service efficiency by 35%'
-            }
           ]
         },
         {
@@ -182,21 +181,22 @@ export default {
           location: 'Bengaluru, Karnataka',
           color: 'info',
           responsibilities: [
-            'Assisted in development of web applications',
-            'Fixed bugs and implemented new features',
-            'Wrote unit tests and documentation',
-            'Participated in code reviews'
+            'Developed and maintained web applications using HTML, CSS, JavaScript, and React.',
+            'Built and optimized responsive UIs for various web projects',
+            'Implemented NativeBase components to enhance mobile-friendly designs.',
+            'Wrote unit tests and documentation to improve code reliability and maintainability.'
           ],
           achievements: [
-            'Promoted to lead developer on mobile app project',
-            'Implemented feature that increased user engagement by 25%',
-            'Created developer documentation framework'
+            'Successfully completed React training and applied skills to multiple projects.',
+            'Built and launched a Twitter clone with modern UI and real-time features.',
+            'Developed multiple websites using React, ensuring performance and scalability.',
+            'Improved frontend performance and user experience through efficient state management.'
           ],
-          technologies: ['JavaScript', 'HTML/CSS', 'PHP', 'MySQL'],
+          technologies: ['HTML', 'CSS', 'JavaScript', 'NativeBase', 'GraphQL', 'Firebase'],
           projects: [
             {
-              name: 'Social Media Dashboard',
-              description: 'Developed analytics dashboard for social media management'
+              name: 'Twitter Clone',
+              description: 'Built a fully functional Twitter clone, implementing features like tweets, likes, and user authentication.'
             }
           ]
         }
