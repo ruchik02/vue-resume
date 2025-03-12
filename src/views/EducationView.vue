@@ -73,7 +73,7 @@ export default {
           location: 'Baddi, Himachal Pradesh',
           achievements: [
             'Hostel Committee Member and active participant in NSS (National Service Scheme)',
-            'Excelled in HTML, CSS, Data Structures & Algorithms (DSA), JavaScript, and React',
+            // 'Excelled in HTML, CSS, Data Structures & Algorithms (DSA), JavaScript, and React',
             'Consistently ranked among top-performing students in academics'
           ],
           subjects: [

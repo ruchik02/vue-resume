@@ -4,7 +4,7 @@
       <v-col cols="12" md="10">
         <h1 class="text-h3 font-weight-bold text-center mb-6">Work Experience</h1>
 
-        <v-timeline side="end" align="start">
+        <v-timeline side="end" align="start" line-color="primary" truncate-line="start">
           <v-timeline-item
             v-for="(exp, index) in experiences"
             :key="index"
@@ -29,52 +29,53 @@
               </v-card-title>
 
               <v-card-text>
-                <v-row>
-                  <v-col cols="12">
-                    <div class="text-subtitle-1 font-weight-medium mb-3">Key Responsibilities:</div>
-                    <v-list density="comfortable">
-                      <v-list-item
-                        v-for="(responsibility, i) in exp.responsibilities"
-                        :key="i"
-                        :title="responsibility"
-                        prepend-icon="mdi-check-circle"
-                        class="text-body-1"
-                      ></v-list-item>
-                    </v-list>
-                  </v-col>
+                <div class="mb-4">
+                  <div class="text-h6 mb-2">Key Responsibilities:</div>
+                  <v-list>
+                    <v-list-item
+                      v-for="(responsibility, index) in exp.responsibilities"
+                      :key="index"
+                      class="px-0"
+                    >
+                      <template v-slot:prepend>
+                        <v-icon color="primary" class="mr-2">mdi-check-circle</v-icon>
+                      </template>
+                      <v-list-item-title>{{ responsibility }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </div>
 
-                  <v-col cols="12" class="mt-2">
-                    <div class="text-subtitle-1 font-weight-medium mb-3">Achievements:</div>
-                    <v-list density="comfortable">
-                      <v-list-item
-                        v-for="(achievement, i) in exp.achievements"
-                        :key="i"
-                        class="text-body-1"
-                      >
-                        <template v-slot:prepend>
-                          <v-icon color="success">mdi-star</v-icon>
-                        </template>
-                        {{ achievement }}
-                      </v-list-item>
-                    </v-list>
-                  </v-col>
+                <div>
+                  <div class="text-h6 mb-2">Achievements:</div>
+                  <v-list>
+                    <v-list-item
+                      v-for="(achievement, index) in exp.achievements"
+                      :key="index"
+                      class="px-0"
+                    >
+                      <template v-slot:prepend>
+                        <v-icon color="success" class="mr-2">mdi-star</v-icon>
+                      </template>
+                      <v-list-item-title>{{ achievement }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </div>
 
-                  <v-col cols="12">
-                    <div class="text-subtitle-1 font-weight-medium mb-2">Technologies Used:</div>
-                    <v-chip-group>
-                      <v-chip
-                        v-for="tech in exp.technologies"
-                        :key="tech"
-                        color="primary"
-                        variant="outlined"
-                        size="small"
-                        class="ma-1"
-                      >
-                        {{ tech }}
-                      </v-chip>
-                    </v-chip-group>
-                  </v-col>
-                </v-row>
+                <v-col cols="12">
+                  <div class="text-subtitle-1 font-weight-medium mb-2">Technologies Used:</div>
+                  <v-chip-group>
+                    <v-chip
+                      v-for="tech in exp.technologies"
+                      :key="tech"
+                      color="primary"
+                      variant="outlined"
+                      size="small"
+                      class="ma-1"
+                    >
+                      {{ tech }}
+                    </v-chip>
+                  </v-chip-group>
+                </v-col>
               </v-card-text>
 
               <v-expand-transition>
@@ -122,17 +123,16 @@ export default {
           location: 'Bengaluru, Karnataka',
           color: 'primary',
           responsibilities: [
-            'Led the development of SwiftUI and Vue.js projects, ensuring high-quality and maintainable code.',
-            'Built and optimized cross-platform mobile applications using React Native and SwiftUI.',
-            'Developed client-focused web applications with Vue.js and Vuetify, ensuring responsive and intuitive UI.',
-            'Mentored junior developers, providing guidance on best practices and performance optimization.',
-            'Collaborated with designers and product teams to translate requirements into functional applications.'
+            'Led the development of SwiftUI and Vue.js projects, ensuring high-quality and maintainable code through best practices and design patterns',
+            'Built and optimized cross-platform mobile applications using React Native and native iOS development with SwiftUI',
+            'Developed client-focused web applications with Vue.js and Vuetify, ensuring responsive design and optimal user experience',
+            'Mentored junior developers, providing guidance on best practices and performance optimization techniques',
+            'Collaborated with designers and product teams to translate requirements into functional and efficient solutions'
           ],
           achievements: [
-            'Successfully delivered a booking app and a recruiter app (Kingsley Gate) within a 4-5 month timeline.',
+            'Successfully delivered a booking app and a recruiter app (Kingsley Gate) within a 4-5 month timeline',
             'Successfully led team of 5 developers in major platform upgrade',
-            'Reduced frontend load times by 40% through performance optimizations in Vue and SwiftUI applications.',
-            'Spearheaded the implementation of Tailwind CSS and Vue.js in modernizing frontend design systems.'
+            'Reduced frontend load times by 40% through performance optimizations in Vue.js applications'
           ],
           technologies: ['Vue.js', 'Node.js', 'SwiftUI', 'React Native', 'Vuetify'],
           projects: [
@@ -239,5 +239,22 @@ export default {
 
 .v-list-item:hover {
   background-color: rgba(var(--v-theme-primary), 0.1);
+}
+
+.v-list-item {
+  min-height: 40px !important;
+}
+
+.v-list-item-title {
+  white-space: normal !important;
+  line-height: 1.5 !important;
+}
+
+.v-card {
+  border-radius: 8px;
+}
+
+.v-card-title {
+  background-color: rgba(var(--v-theme-primary), 0.05);
 }
 </style> 
