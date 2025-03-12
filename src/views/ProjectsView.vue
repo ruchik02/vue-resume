@@ -124,6 +124,7 @@
 <script>
 import portfolioImage from '@/assets/1.png'
 import image2 from '@/assets/2.png'
+import image3 from '@/assets/3.png'
 export default {
   name: 'ProjectsView',
   data() {
@@ -148,6 +149,15 @@ export default {
           technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/ruchik02/my-Resume',
           demo: 'https://my-resume-five-bay.vercel.app/'
+        },
+        {
+          title: 'Developer Community',
+          description: 'A full-stack social media platform for developers to share their work, post articles, and connect with others. Features include user authentication, real-time interactions, and a modern UI.',
+          image: image3,
+          category: 'Web',
+          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+          github: 'https://github.com/ruchik02/dev-connect',
+          demo: 'https://dev-connect-ten-eta.vercel.app/'
         },
       ]
     }
