@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container class="projects-container pt-0">
     <v-row justify="center">
-      <v-col cols="12" md="10">
+      <v-col cols="12" md="10" class="pt-0">
         <h1 class="text-h3 font-weight-bold text-center mb-6">My Projects</h1>
 
         <v-row>
@@ -9,6 +9,7 @@
             <v-chip-group
               v-model="selectedCategory"
               selected-class="primary"
+              class="justify-center"
             >
               <v-chip
                 v-for="category in categories"
@@ -23,7 +24,35 @@
           </v-col>
         </v-row>
 
-        <v-row>
+        <!-- No Projects Found Message -->
+        <v-row v-if="filteredProjects.length === 0">
+          <v-col cols="12">
+            <v-card class="text-center pa-6 my-4" elevation="0">
+              <div class="no-projects-content">
+                <v-icon
+                  size="64"
+                  color="grey"
+                  class="mb-4"
+                >
+                  mdi-folder-search-outline
+                </v-icon>
+                <h3 class="text-h5 mb-2">No Projects Found</h3>
+                <p class="text-body-1 text-grey mb-4">
+                  No projects available for the selected category: {{ selectedCategory }}
+                </p>
+                <v-btn
+                  color="primary"
+                  @click="selectedCategory = 'All'"
+                >
+                  VIEW ALL PROJECTS
+                </v-btn>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- Projects Grid -->
+        <v-row v-else class="mt-2">
           <v-col
             v-for="(project, index) in filteredProjects"
             :key="index"
@@ -93,6 +122,8 @@
 </template>
 
 <script>
+import portfolioImage from '@/assets/1.png'
+import image2 from '@/assets/2.png'
 export default {
   name: 'ProjectsView',
   data() {
@@ -101,32 +132,23 @@ export default {
       categories: ['All', 'Web', 'Mobile', 'Backend', 'AI/ML'],
       projects: [
         {
-          title: 'E-Commerce Platform',
-          description: 'A full-stack e-commerce platform with real-time inventory management and payment processing.',
-          image: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
+          title: 'Modern Website',
+          description: 'A modern portfolio and creative hub built with Vue.js, featuring dark/light modes, interactive components, and a responsive design.',
+          image: portfolioImage,
           category: 'Web',
-          technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe'],
-          github: 'https://github.com/yourusername/project1',
-          demo: 'https://project1-demo.com'
-        },
-        {
-          title: 'AI Image Recognition',
-          description: 'Machine learning model that can identify and classify objects in images with high accuracy.',
-          image: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
-          category: 'AI/ML',
-          technologies: ['Python', 'TensorFlow', 'OpenCV', 'Flask'],
-          github: 'https://github.com/yourusername/project2',
-          demo: 'https://project2-demo.com'
-        },
-        {
-          title: 'Task Management App',
-          description: 'Mobile application for task management with real-time collaboration features.',
-          image: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
-          category: 'Mobile',
-          technologies: ['React Native', 'Firebase', 'Redux'],
-          github: 'https://github.com/yourusername/project3',
+          technologies: ['Vue.js', 'Vuetify', 'Vuex', 'Vue Router', 'Firebase'],
+          github: 'https://github.com/ruchik02/portfolio-vue',
           demo: null
-        }
+        },
+        {
+          title: 'Portfolio',
+          description: 'Modern portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark/light mode, responsive design, and smooth animations.',
+          image: image2,
+          category: 'Web',
+          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+          github: 'https://github.com/ruchik02/my-Resume',
+          demo: 'https://my-resume-five-bay.vercel.app/'
+        },
       ]
     }
   },
@@ -142,6 +164,23 @@ export default {
 </script>
 
 <style scoped>
+.projects-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.text-h3 {
+  margin-top: 1rem;
+}
+
+.no-projects-content {
+  padding: 2rem 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .project-card {
   transition: transform 0.2s;
   height: 100%;
@@ -157,5 +196,28 @@ export default {
 
 .v-chip {
   margin: 4px;
+}
+
+/* Add animation for the no projects found message */
+.v-card {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Center align chips on mobile */
+@media (max-width: 600px) {
+  .v-chip-group {
+    justify-content: center;
+  }
 }
 </style> 
